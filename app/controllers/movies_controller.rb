@@ -16,7 +16,7 @@ class MoviesController < ApplicationController
 
       @movie.save
       
-      redirect_to("/movies")
+      redirect_to "/movies"
     end
     
     
@@ -53,7 +53,7 @@ class MoviesController < ApplicationController
 
       @movie.save
 
-      redirect_to("/movies")
+      redirect_to "/movies"
     end
     
     def destroy
