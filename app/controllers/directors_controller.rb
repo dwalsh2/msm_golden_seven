@@ -15,7 +15,7 @@ class DirectorsController < ApplicationController
 
       @director.save
       
-      redirect_to("/directors")
+      redirect_to "/directors"
     end
     
     
@@ -46,21 +46,19 @@ class DirectorsController < ApplicationController
       
       @director = Director.find(params["id"])
 
-      @director.dob = params["dob"]
-      @director.name = params["name"]
-      @director.bio = params["bio"]
-      @director.image_url = params["image_url"]
+      @director.dob = params["the_dob"]
+      @director.name = params["the_name"]
+      @director.bio = params["the_bio"]
+      @director.image_url = params["the_image_url"]
 
       @director.save
 
-      redirect_to("/directors")
+      redirect_to "/directors"
     end
     
     def destroy
       
       @director = Director.find(params["id"])
-
-      @director.destroy
       
       render("directors/destroy_row.html.erb")
     end

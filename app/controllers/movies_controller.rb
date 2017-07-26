@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
       @movie.year = params["movie_year"]
       @movie.duration = params["movie_duration"]
       @movie.description = params["movie_description"]
-      @movie.image_url = params["movie_url"]
+      @movie.image_url = params["movie_image_url"]
 
       @movie.save
       
@@ -50,7 +50,6 @@ class MoviesController < ApplicationController
       @movie.duration = params["duration"]
       @movie.description = params["description"]
       @movie.image_url = params["image_url"]
-      @movie.director_id = params["director_id"]
 
       @movie.save
 

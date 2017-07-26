@@ -15,7 +15,7 @@ class ActorsController < ApplicationController
 
       @actor.save
       
-      redirect_to("/actors")
+      redirect_to "/actors"
     end
     
     
@@ -46,14 +46,14 @@ class ActorsController < ApplicationController
       
       @actor = Actor.find(params["id"])
 
-      @actor.dob = params["dob"]
-      @actor.name = params["name"]
-      @actor.bio = params["bio"]
-      @actor.image_url = params["actor_url"]
+      @actor.dob = params["the_dob"]
+      @actor.name = params["the_name"]
+      @actor.bio = params["the_bio"]
+      @actor.image_url = params["the_image_url"]
 
       @actor.save
 
-      redirect_to("/actors")
+      redirect_to "/actors"
     end
     
     def destroy
