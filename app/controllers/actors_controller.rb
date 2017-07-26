@@ -15,7 +15,7 @@ class ActorsController < ApplicationController
 
       @actor.save
       
-      redirect_to "/actors"
+      redirect_to "/actors/" + @actor.id
     end
     
     
@@ -53,7 +53,7 @@ class ActorsController < ApplicationController
 
       @actor.save
 
-      redirect_to "/actors"
+      redirect_to "/actors/" + @actor.id
     end
     
     def destroy
@@ -64,7 +64,6 @@ class ActorsController < ApplicationController
       
       render("actors/destroy_row.html.erb")
     end
-    
     
 end
 
