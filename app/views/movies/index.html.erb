@@ -1,28 +1,48 @@
-<h1>All Movies</h1>
+<div class="page-header">
+  <h1>Movies</h1>
+</div>
 
-<p>
-    <a href = "/movies/new">
-        Add a new photo
-    </a>
-</p>
+<p><a href="/movies/new_form" class="btn btn-primary">Add a New Movie</a></p>
 
-<% @our_movies.each do |the_movie| %>
-    <div class = "thumbnail">
-        <img src="<%= the_photo.source %>"
-        
-        <div class = "caption">
-            <a href="/photos/<%= the_photo.id %>" class="btn btn-default btn-block">
-                Show details
-            </a>
-                
-            <a href="/photos/<%= the_photo.id %>/edit" class="btn btn-default btn-block">
-                Edit
-            </a>
-                
-            <a href="/delete_photo/<%= the_photo.id %>" class="btn btn-default btn-block">
-                Delete
-            </a>
-                
-        </div>
-    </div>
-<% end %>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Duration</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @our_movies.each do |movie| %>
+      <tr>
+        <td><img src="<%= movie.image_url %>" width="80"></td>
+        <td><%= movie.title %></td>
+        <td><%= movie.year %></td>
+        <td><%= movie.duration %></td>
+        <td><%= movie.description %></td>
+        <td>
+          <a href="/movies/<%= movie.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/movies/<%= movie.id %>/edit_form" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_movie/<%= movie.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

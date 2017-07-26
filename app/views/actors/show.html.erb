@@ -1,7 +1,18 @@
-<h1>Photo Details</h1>
+<div class="page-header">
+  <h1>Actor #<%= @actor.id %></h1>
+</div>
 
-<img src="<%= @pic.source %>">
+<dl class="dl-horizontal">
+  <dt>Dob</dt>
+  <dd><%= @actor.dob %></dd>
 
-<p>
-    <%= @pic.caption %>
-</p>
+  <dt>Name</dt>
+  <dd><%= @actor.name %></dd>
+
+  <dt>Bio</dt>
+  <dd><%= @actor.bio %></dd>
+
+  <dt>Image</dt>
+  <dd><img src="<%= @actor.image_url %>" width="320"></dd>
+
+</dl>

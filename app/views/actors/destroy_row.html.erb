@@ -1,11 +1,11 @@
-<h1>
-    You deleted a photo!
-</h1>
+<div class="page-header">
+    <h1>
+        Destroyed <%= @actor.name %>
+    </h1>    
+</div>
 
 <p>
-    There are now <%= @remaining_photos %> photos.
-</p>
-
-<p>
-    <a href="/photos">Click here</a> to go back.
+    <a href="/actors" class="btn btn-primary">
+        Go Back
+    </a>
 </p>

@@ -1,21 +1,45 @@
-<h1>Add a new photo</h1>
+<h1>Add a new movie</h1>
 
-<form action="/create_photo">
+<form action="/create_movie">
   <div>
-    <label for="Image URL">
+    <label for="title">
+        <b>Title</b>
+    </label>
+    
+    <input id="title" type="text" name="movie_title">
+  </div>
+  
+  <div>
+    <label for="year">
+        <b>Year</b>
+    </label>
+    
+    <input id="year" type="date" name="movie_year">
+  </div>
+  
+  <div>
+    <label for="duration">
+        <b>Duration</b>
+    </label>
+    
+    <input id="duration" type="text" name="movie_duration">
+  </div>
+  
+  <div>
+    <label for="description">
+        <b>Description</b>
+    </label>
+    
+    <input id="description" type="text" name="movie_description">
+  </div>
+  
+  <div>
+    <label for="image_url">
         <b>Image URL</b>
     </label>
     
-    <input id="Image URL" type="text" name="the_source">
+    <input id="image_url" type="text" name="actor_url">
   </div>
   
-  <div>
-    <label for="Caption">
-        <b>Caption</b>
-    </label>
-    
-    <input id="Caption" type="text" name="the_caption">
-  </div>
-  
-  <button>Create photo</button>
+  <button>Create Movie</button>
 </form>

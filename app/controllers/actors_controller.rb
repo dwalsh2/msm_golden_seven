@@ -1,68 +1,68 @@
-class PicturesController < ApplicationController
+class ActorsController < ApplicationController
     def new_form
         
-        render("pic_templates/new_form.html.erb")
+        render("actors/new_form.html.erb")
     end
     
     
     def create_row
       
-      p = Photo.new
-      p.source = params["the_source"]
-      p.caption = params["the_caption"]
-      p.save
+      @actor = Actor.new
+      @actor.name = params["actor_name"]
+      @actor.bio = params["actor_bio"]
+      @actor.dob = params["actor_dob"]
+      @actor.image_url = params["actor_url"]
+
+      @actor.save
       
-      @photo_count = Photo.count
-      
-      render("pic_templates/create_row.html.erb")
+      redirect_to("/actors")
     end
     
     
     def index
         
-      @our_photos = Photo.order(:created_at => :desc)
+      @our_actors = Actor.order(:created_at => :desc)
             
-      render("pic_templates/index.html.erb")
+      render("actors/index.html.erb")
     end
     
     
     def show
         
-      @pic = Photo.find(params["the_id"])
-        # the_id_number = params["an_id"]
+      @actor = Actor.find(params["id"])
         
-        # pic = Photo.find(the_id_number)
-        
-        # @the_source = pic.source
-        # @the_caption = pic.caption
-        
-      render("pic_templates/show.html.erb")
+      render("actors/show.html.erb")
     end
     
    
     def edit_form
       
-      @the_photo = Photo.find(params["an_id"])
+      @actor = Actor.find(params["id"])
       
-      
-      render("pic_templates/edit_form.html.erb")
+      render("actors/edit_form.html.erb")
     end
     
     def update_row
       
-      @total_photos = Photo.count
-      
-      render("pic_templates/update_row.html.erb")
+      @actor = Actor.find(params["id"])
+
+      @actor.dob = params["dob"]
+      @actor.name = params["name"]
+      @actor.bio = params["bio"]
+      @actor.image_url = params["actor_url"]
+
+      @actor.save
+
+      redirect_to("/actors")
     end
     
-    def destroy_row
+    def destroy
       
-      @the_photo = Photo.find(params["toast_id"])
-      @the_photo.destroy
+      @actor = Actor.find(params["id"])
+
+      @actor.destroy
       
-      @remaining_photos = Photo.count
-      
-      render("pic_templates/destroy_row.html.erb")
+      render("actors/destroy_row.html.erb")
     end
     
     
