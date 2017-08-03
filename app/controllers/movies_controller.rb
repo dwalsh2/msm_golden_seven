@@ -62,7 +62,7 @@ class MoviesController < ApplicationController
 
       @movie.destroy
       
-      render("movies/destroy_row.html.erb")
+      redirect_to "/movies"
     end
     
     

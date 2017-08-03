@@ -62,7 +62,7 @@ class ActorsController < ApplicationController
 
       @actor.destroy
       
-      render("actors/destroy_row.html.erb")
+      redirect_to "/actors"
     end
     
 end
