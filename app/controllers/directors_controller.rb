@@ -60,7 +60,7 @@ class DirectorsController < ApplicationController
       
       @director = Director.find(params["id"])
       
-      render("directors/destroy_row.html.erb")
+      redirect_to "/directors"
     end
     
     

@@ -21,7 +21,8 @@
     <tbody>
         <% @our_directors.each do |director| %>
           <tr>
-            <td><img src="<%= director.image_url %>" width="80"></td>
+            <!--<td><img src="<%= director.image_url %>" width="80"></td>-->
+            <td><%= director.image_url %></td>
             <td><%= director.dob %></td>
             <td><%= director.name %></td>
             <td><%= director.bio %></td>
