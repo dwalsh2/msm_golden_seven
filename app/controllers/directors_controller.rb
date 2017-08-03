@@ -15,7 +15,7 @@ class DirectorsController < ApplicationController
 
       @director.save
       
-      redirect_to "/directors/" + @director.id
+      redirect_to "/directors/#{@director.id}"
     end
     
     
@@ -53,7 +53,7 @@ class DirectorsController < ApplicationController
 
       @director.save
 
-      redirect_to "/directors/" + @director.id
+      redirect_to "/directors/#{@director.id}"
     end
     
     def destroy
