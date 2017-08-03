@@ -45,6 +45,8 @@ class MoviesController < ApplicationController
     
     def update_row
       
+      @movie = Movie.find(params["id"])
+      
       @movie.title = params["title"]
       @movie.year = params["year"]
       @movie.duration = params["duration"]
