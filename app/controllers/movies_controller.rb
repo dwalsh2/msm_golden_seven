@@ -16,7 +16,7 @@ class MoviesController < ApplicationController
 
       @movie.save
       
-      redirect_to "/movies/#{@movie.id}"
+      redirect_to "/movies"
     end
     
     
