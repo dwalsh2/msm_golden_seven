@@ -28,16 +28,19 @@
         <td><%= movie.description %></td>
         <td>
           <a href="/movies/<%= movie.id %>" class="btn btn-primary">
+            Show details
             <i class="fa fa-search-plus"></i>
           </a>
         </td>
         <td>
           <a href="/movies/<%= movie.id %>/edit_form" class="btn btn-warning">
+            Edit details
             <i class="fa fa-edit"></i>
           </a>
         </td>
         <td>
           <a href="/delete_movie/<%= movie.id %>" class="btn btn-danger">
+            Delete movie
             <i class="fa fa-trash-o"></i>
           </a>
         </td>

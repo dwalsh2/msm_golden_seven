@@ -27,16 +27,19 @@
             <td><%= actor.bio %></td>
             <td>
               <a href="/actors/<%= actor.id %>" class="btn btn-primary">
+                Show details
                 <i class="fa fa-search-plus"></i>
               </a>
             </td>
             <td>
               <a href="/actors/<%= actor.id %>/edit_form" class="btn btn-warning">
+                Edit details
                 <i class="fa fa-edit"></i>
               </a>
             </td>
             <td>
               <a href="/delete_actor/<%= actor.id %>" class="btn btn-danger">
+                Delete actor
                 <i class="fa fa-trash-o"></i>
               </a>
             </td>
