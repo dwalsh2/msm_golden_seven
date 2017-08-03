@@ -16,3 +16,11 @@
   <dd><img src="<%= @director.image_url %>" width="320"></dd>
 
 </dl>
+
+<a href="/directors/<%= @director.id %>/edit_form" class="btn btn-warning">
+  Edit director
+</a>
+
+<a href="/delete_director/<%= @director.id %>" class="btn btn-danger">
+  Delete director
+</a>
