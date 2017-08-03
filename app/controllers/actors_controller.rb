@@ -15,7 +15,7 @@ class ActorsController < ApplicationController
 
       @actor.save
       
-      redirect_to "/actors/"
+      redirect_to "/actors"
     end
     
     
